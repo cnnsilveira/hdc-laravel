@@ -9,7 +9,7 @@ body {
 }
 
 .btn-primary {
-	background-color: #F2A340;
+	background-color: #F2A340 !important;
 	transition: all .2s;
 	border: none;
 	border-radius: 20px;
@@ -38,8 +38,23 @@ header {
 		width: 35px;
 	}
 
+	nav, #navbar {
+		width: 100%;
+	}
+	#navbar {
+		justify-content: space-between;
+	}
+	.navbar-nav {
+		gap: 20px;
+	}
+
 	.navbar-light .navbar-nav .nav-link {
 		color: #fff;
+		transition: all .2s;
+
+		&:hover, &:active {
+			color: #F2A340 !important;
+		}
 	}
 
 	.navbar-brand svg {
@@ -146,6 +161,14 @@ main {
 				font-size: .9rem;
 				font-weight: 300;
 			}
+		}
+	}
+
+	#event-create-container {
+		padding-top: 50px;
+
+		h1 {
+			margin-bottom: 20px;
 		}
 	}
 

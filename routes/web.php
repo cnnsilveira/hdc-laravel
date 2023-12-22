@@ -26,3 +26,4 @@ Route::get('/produtos/{id}', function ($id) {
 });
 
 Route::get('/eventos/novo', [EventController::class, 'create_event']);
+Route::post('/eventos', [EventController::class, 'store']);

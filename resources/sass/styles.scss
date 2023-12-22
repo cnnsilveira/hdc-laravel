@@ -6,15 +6,20 @@ body {
 	display: flex;
 	flex-direction: column;
 	min-height: 100dvh;
+	font-family: 'Plus Jakarta Sans', sans-serif;
+	font-size: 16px;
+	letter-spacing: 0.3px;
 }
 
 .btn-primary {
 	background-color: #F2A340 !important;
 	transition: all .2s;
 	border: none;
-	border-radius: 20px;
+	border-radius: 15px;
 	padding-left: 20px;
 	padding-right: 20px;
+	font-size: 1.2rem;
+	font-weight: 500;
 
 	&:hover, &:active {
 		background-color: #F2A340 !important;
@@ -72,6 +77,7 @@ main {
 		font-size: 3.5rem;
 		font-weight: 600;
 		color: #F2A340;
+		margin: 0;
 	}
 
 	h2 {
@@ -165,10 +171,17 @@ main {
 	}
 
 	#event-create-container {
-		padding-top: 50px;
+		padding: 50px;
 
 		h1 {
 			margin-bottom: 20px;
+		}
+		.form-control {
+			border-radius: 15px;
+
+			&:not(textarea, select) {
+				padding: 20px;
+			}
 		}
 	}
 

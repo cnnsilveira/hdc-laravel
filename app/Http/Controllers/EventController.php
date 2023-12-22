@@ -4,19 +4,14 @@ namespace App\Http\Controllers;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Event;
 
 class EventController extends Controller
 {
     public function index() {
-		$nome = isset( $_GET['nome'] ) ? $_GET['nome'] : 'Caio';
+		$events = Event::all();
 
-		$nomes = array(
-			'Caio',
-			'Julia',
-			'Renato',
-		);
-
-		return view('pages.index', ['nome' => $nome, 'array' => $nomes]);
+		return view('pages.index', ['events' => $events]);
 	}
 
 	public function contact() {
